@@ -357,5 +357,8 @@ $app_name = idx($app_info, 'name', '');
     <div class="classname">
     	<div class="webname">FaceSearch</div>
     </div>
+    <div class="mainarea">
+    	
+    </div>
   </body>
 </html>
