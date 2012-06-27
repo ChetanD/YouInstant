@@ -17,7 +17,7 @@ body {
 
 .classname
 {
-	
+	position:absolute;
 	height: 5%;
 	background-image: url("../images/background.png");
 	width: 100%;
