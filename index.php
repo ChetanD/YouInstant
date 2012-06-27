@@ -354,6 +354,6 @@ $app_name = idx($app_info, 'name', '');
     ?>
 
     -->
-    <div class="classname">Chetan yuvraj Dhembre</div>
+    <div class="classname"></div>
   </body>
 </html>

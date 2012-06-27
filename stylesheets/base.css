@@ -17,10 +17,11 @@ body {
 
 .classname
 {
-	height: 10%;
+	position:absolute;
+	height: 15%;
 	background-color: red;
 	width: 100%
-	position: fixed;
+	
 }
 
 a:link, a:visited {
