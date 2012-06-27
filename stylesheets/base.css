@@ -19,8 +19,9 @@ body {
 {
 	position:absolute;
 	height: 12%;
-	background-color: red;
+	background-image: url("../images/bg-pattern.png");
 	width: 100%
+	
 	
 }
 
