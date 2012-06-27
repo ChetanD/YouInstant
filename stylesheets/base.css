@@ -27,7 +27,7 @@ body {
 .webname
 {
 	color: white;
-	font-weight: bold;
+	font-weight: bolder;
 }
 
 a:link, a:visited {
