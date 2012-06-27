@@ -36,7 +36,7 @@ body {
 
 .mainarea
 {
-	position:absolute;
+	position: relative;
 	height: 80%;
 	width: 100%;
 	background-image: url("../images/mainarea.jpg");
