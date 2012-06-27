@@ -13,6 +13,12 @@ body {
   margin: 20px;
 }
 
+.classname
+{
+	height: 10%;
+	background-color: red;
+}
+
 a:link, a:visited {
   color: #3b5998;
   font-weight: bold;

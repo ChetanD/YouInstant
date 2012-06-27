@@ -208,8 +208,9 @@ $app_name = idx($app_info, 'name', '');
     </script>
 
     <header >
-     <!--<?php if (isset($basic)) { ?>
-      <p id="picture" style="background-image: url(https://graph.facebook.com/<?php echo he($user_id); ?>/picture?type=normal)"></p>
+     <?php if (isset($basic)) { ?>
+     	<div class="classname"></div>
+     <!-- <p id="picture" style="background-image: url(https://graph.facebook.com/<?php echo he($user_id); ?>/picture?type=normal)"></p>
 
       <div>
         <h1>Welcome121212, <strong><?php echo he(idx($basic, 'name')); ?></strong></h1>
