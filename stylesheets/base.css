@@ -36,9 +36,8 @@ body {
 
 .mainarea
 {
-	
-	
-	background-image: url("../images/mainarea.jpg");
+	/*background-image: url("../images/mainarea.jpg");*/
+	background-color: red;
 }
 a:link, a:visited {
   color: #3b5998;
