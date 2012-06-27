@@ -22,7 +22,12 @@ body {
 	background-image: url("../images/background.png");
 	width: 100%;
 		
-	
+}
+
+.webname
+{
+	color: white;
+	font-weight: 500;
 }
 
 a:link, a:visited {
