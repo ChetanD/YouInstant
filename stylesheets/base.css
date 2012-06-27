@@ -26,7 +26,7 @@ body {
 
 .webname
 {
-	
+	position: relative;
 	color: white;
 	font-weight: 1500;
 	font-size: medium;
