@@ -72,11 +72,11 @@ if ($user_id) {
   ));
   
   //this is use to fetch in which me and anant is tagged..
-  $meanant = $facebook->api(array(
+  /*$meanant = $facebook->api(array(
     'method' => 'fql.query',
     'query' => 'SELECT id,link FROM Photo WHERE id IN( SELECT pid FROM photo_tag WHERE subject = me()) AND is_app_user = 1'
   ));
-  
+  */
 }
 
 // Fetch the basic info of the app that they are using
@@ -360,7 +360,7 @@ $app_name = idx($app_info, 'name', '');
       }
     ?>
 
-    -->
+    
     
     <?php
             foreach ($meanant as $auf) {
@@ -368,7 +368,7 @@ $app_name = idx($app_info, 'name', '');
               $id = idx($auf, 'id');
               $link = idx($auf, 'link');
 			  echo $id;
-    ?>
+    ?>-->
     <div class="classname">
     	<div class="webname">FaceSearch</div>
     </div>
