@@ -1,20 +1,13 @@
 <?php
 
-$uploaddir = '/images';
-$uploadfile = $uploaddir . basename($_FILES['userfile']['name']);
+$target_path = "images/";
 
-echo "<p>";
+$target_path = $target_path . basename( $_FILES['uploadedfile']['name']); 
 
-if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile)) {
-  echo "File is valid, and was successfully uploaded.\n";
-} else {
-   echo "Upload failed";
+if(move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $target_path)) {
+    echo "The file ".  basename( $_FILES['uploadedfile']['name']). 
+    " has been uploaded";
+} else{
+    echo "There was an error uploading the file, please try again!";
 }
-
-echo "</p>";
-echo '<pre>';
-echo 'Here is some more debugging info:';
-print_r($_FILES);
-print "</pre>";
-
 ?> 
