@@ -1,4 +1,5 @@
-<?php 
+<?php
+        echo "demo";  
         session_start(); 
      
         if(isset($_SESSION["count"])) { 
@@ -10,16 +11,3 @@
        $_SESSION["count"] = $accesses;
        echo $_SESSION["count"]; 
    ?> 
-  <html> 
-  <head> 
-  <title>Access counter</title> 
-  </head> 
-   
-  <body> 
-  <h1>Access counter</h1> 
-   
-  <p>You have accessed this page <?php echo $accesses; ?> times today.</p> 
-   
-  <p>[<a href="counter.php">Reload</a>]</p> 
-  </body> 
- </html> 
