@@ -1,6 +1,6 @@
 <?php
 
-$uploaddir = '/images/';
+$uploaddir = '/images';
 $uploadfile = $uploaddir . basename($_FILES['userfile']['name']);
 
 echo "<p>";
