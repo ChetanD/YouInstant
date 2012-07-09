@@ -1,5 +1,17 @@
 <?php import_request_variables("pg", "form_");
     echo $form_begin;
+	 session_start(); 
+     
+        if(isset($_SESSION["count"])) { 
+            $accesses = $_SESSION["count"] + 1; 
+        } else { 
+            $accesses = 1; 
+        } 
+    
+       $_SESSION["count"] = $accesses;
+	   $_SESSION["username"] = $form_end;
+       echo $_SESSION["username"];
+	
  ?>
 <html> 
 <head> 
