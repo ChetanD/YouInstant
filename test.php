@@ -1,4 +1,4 @@
 <?php
   echo "demo";
-  return "demo";
+ // return "demo";
 ?>  
