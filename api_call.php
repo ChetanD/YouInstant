@@ -36,7 +36,7 @@ function getResource($url){
 }
 
 function do_search($tag) {
-  $tag = urlencode($tag);
+  //$tag = urlencode($tag);
 
 #insert your own Flickr API KEY here
 
