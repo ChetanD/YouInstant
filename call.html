@@ -17,7 +17,7 @@
 				    url: "test.php",
 				    data:d,
 				    success: function(data) {
-				        alert(data);
+				        document.getElementById("result").innerText=demo;
 				    }
               });
 		}
@@ -26,6 +26,7 @@
 </head>
 <body>
 <input type="button" onclick="clickMe();" value="ClickMe!!!"/>
+<duv id="result"></duv>
 </body>
 </html>
 
