@@ -26,14 +26,14 @@ if (isset($_GET['tag'])) {
 
 # uses libcurl to return the response body of a GET request on $url
 function getResource($url){
-  		$ch = curl_init();
-		$timeout = 5;
-		curl_setopt($ch,CURLOPT_URL,$url);
-		curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
-		curl_setopt($ch,CURLOPT_CONNECTTIMEOUT,$timeout);
-		$data = curl_exec($ch);
-		curl_close($ch);
-		return $data;
+  		 $crl = curl_init();
+        $timeout = 5;
+        curl_setopt ($crl, CURLOPT_URL,$url);
+        curl_setopt ($crl, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt ($crl, CURLOPT_CONNECTTIMEOUT, $timeout);
+        $ret = curl_exec($crl);
+        curl_close($crl);
+        return $ret;
 }
 
 function do_search($tag) {
@@ -43,7 +43,7 @@ function do_search($tag) {
 
   $api_key = "1a6f713ecc90fc9bd96dbc6a53d0acb0";
   $per_page="10";
-  $url = "http://google.com/complete/search?output=toolbar&q={$tag}";
+  $url = "http://google.com/complete/search?output=toolbar&q=india";
 
   $feed = getResource($url);
   $xml = simplexml_load_string($feed);
