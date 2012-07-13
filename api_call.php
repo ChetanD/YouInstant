@@ -36,16 +36,15 @@ function getResource($url){
 }
 
 function do_search($tag) {
-  //$tag = urlencode($tag);
+  $tag = urlencode($tag);
 
 #insert your own Flickr API KEY here
 
   $api_key = "1a6f713ecc90fc9bd96dbc6a53d0acb0";
   $per_page="10";
-  $url = "http://google.com/complete/search?output=toolbar&q=$tag";
+  $url = "http://google.com/complete/search?output=toolbar&q={$tag}";
 
   $feed = getResource($url);
-  echo $feed;
   $xml = simplexml_load_string($feed);
   print "<p>Total number of photos for {$tag}: {$xml->photos['total']}</p>";
 
