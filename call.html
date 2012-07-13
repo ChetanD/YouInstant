@@ -11,7 +11,7 @@
 	<script type="text/javascript">
 		function clickMe()
 		{
-			var d="query='"+document.getElementById("search")+"'";
+			var d="query='"+document.getElementById("search").value+"'";
 			$.ajax({
 				    type: "POST",
 				    url: "test.php",
@@ -28,7 +28,7 @@
 	</script>
 </head>
 <body>
-<input type="text"  value="ClickMe!!!" onkeyup="clickMe()" id="search"/>
+<input type="text" onkeyup="clickMe()" id="search"/>
 <br />
 <div id="result"></div>
 </body>
