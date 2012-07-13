@@ -42,10 +42,11 @@ function do_search($tag) {
 
   $api_key = "1a6f713ecc90fc9bd96dbc6a53d0acb0";
   $per_page="10";
-  $url = "http://api.flickr.com/services/rest/?method=flickr.photos.search&api_key={$api_key}&tags={$tag}&per_page={$per_page}";
+  $url = "http://www.google.co.in/s?hl=en&q=how%20to%20get%20which%20adr";
 
   $feed = getResource($url);
   $xml = simplexml_load_string($feed);
+  print $xml;
   print "<p>Total number of photos for {$tag}: {$xml->photos['total']}</p>";
 
 # http://www.flickr.com/services/api/misc.urls.html
