@@ -21,7 +21,7 @@ curl_setopt($ch,CURLOPT_POST,count($fields));
 curl_setopt($ch,CURLOPT_POSTFIELDS,$fields_string);
 $response = curl_exec ($curl);
 curl_close ($curl);
-echo $response;
+echo "demo:".$response;
 $rxml = simplexml_load_string($response);
 echo $rxml;
 ?>
