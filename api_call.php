@@ -41,7 +41,7 @@ function do_search($tag) {
 #insert your own Flickr API KEY here
 
   $api_key = "1a6f713ecc90fc9bd96dbc6a53d0acb0";
-  $per_page="5";
+  $per_page="10";
   $url = "http://api.flickr.com/services/rest/?method=flickr.photos.search&api_key={$api_key}&tags={$tag}&per_page={$per_page}";
 
   $feed = getResource($url);
