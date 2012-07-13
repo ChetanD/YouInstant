@@ -17,7 +17,7 @@
 	<body>
 		<?php
 			// set url to make country query into the API
-      $url = "http://open.worldbank.org/rest.php?method=wb.countries.get&per_page=250";
+      $url = "http://api.worldbank.org/country?per_page=10";
       
       // make the call to the API, which returns valid XML
       $xml = simplexml_load_file($url);
