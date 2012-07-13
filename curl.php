@@ -1,4 +1,5 @@
-<?php import_request_variables("pg", "form_");
+<?php 
+import_request_variables("pg", "form_");
     echo $form_begin;
 	 session_start(); 
      

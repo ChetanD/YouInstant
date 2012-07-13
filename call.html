@@ -11,9 +11,11 @@
 	<script type="text/javascript">
 		function clickMe()
 		{
+			var d="demo=chetan";
 			$.ajax({
 				    type: "POST",
 				    url: "test.php",
+				    data:d,
 				    success: function(data) {
 				        alert(data);
 				    }

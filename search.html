@@ -24,6 +24,24 @@
 </div>
 
 </form>
+
+
+<div id="cse" style="width: 100%;">Loading</div>
+<script src="https://www.google.co.in/jsapi" type="text/javascript"></script>
+<script type="text/javascript"> 
+  google.load('search', '1.1', {language : 'Hn'});
+  google.setOnLoadCallback(function() {
+    var customSearchOptions = {};
+    var orderByOptions = {};
+    orderByOptions['keys'] = [{label: 'Relevance', key: ''},{label: 'Date', key: 'date'}];
+    customSearchOptions['enableOrderBy'] = true;
+    customSearchOptions['orderByOptions'] = orderByOptions;  var customSearchControl = new google.search.CustomSearchControl(
+      '018327105722566206790:rsffyckfi_g', customSearchOptions);
+    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+    customSearchControl.draw('cse');
+  }, true);
+</script>
+<link rel="stylesheet" href="https://www.google.com/cse/style/look/default.css" type="text/css" />
 </body>
 </html>
 
