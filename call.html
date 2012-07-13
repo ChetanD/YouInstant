@@ -18,7 +18,7 @@
 				    data:d,
 				    success: function(data) {
 				        document.getElementById("result").innerHTML=data;
-				        alert(document.getElementById("result").innerHTML);
+				        //alert(document.getElementById("result").innerHTML);
 				        
 				        
 				    }
@@ -28,7 +28,7 @@
 	</script>
 </head>
 <body>
-<input type="button" onclick="clickMe();" value="ClickMe!!!"/>
+<input type="text"  value="ClickMe!!!" onkeyup="clickMe()"/>
 <br />
 <div id="result"></div>
 </body>
