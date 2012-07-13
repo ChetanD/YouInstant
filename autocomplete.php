@@ -9,6 +9,8 @@
         $retValue = curl_exec($ch);                      
         curl_close($ch);
        // return $retValue;
+       $xml = new SimpleXMLElement($retValue);
+echo $xml->toplevel->CompleteSuggestion[0]->suggestion['data'];
         echo "demo".$retValue;
 		printf($retValue);
 ?>
