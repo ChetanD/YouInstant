@@ -15,6 +15,8 @@
 //$completeurl =
 //"http://ws.audioscrobbler.com/2.0/?method=&user=xgayax" .
 
-$xml = simplexml_load_file($url);
-echo $xml;
+$xml = simplexml_load_string($url);
+$xml=$xml->toplevel->CompleteSuggestion;
+
+echo $xml[0]->suggestion->data;
 ?>
