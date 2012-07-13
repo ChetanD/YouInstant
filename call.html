@@ -17,7 +17,10 @@
 				    url: "test.php",
 				    data:d,
 				    success: function(data) {
-				        document.getElementById("result").innerText=data;
+				        document.getElementById("result").innerHTML=data;
+				        alert(document.getElementById("result").innerHTML);
+				        
+				        
 				    }
               });
 		}
@@ -26,6 +29,7 @@
 </head>
 <body>
 <input type="button" onclick="clickMe();" value="ClickMe!!!"/>
+<br />
 <div id="result"></div>
 </body>
 </html>
