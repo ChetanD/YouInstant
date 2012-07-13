@@ -15,8 +15,13 @@
 //$completeurl =
 //"http://ws.audioscrobbler.com/2.0/?method=&user=xgayax" .
 
-$xml = simplexml_load_string($url);
-$xml=$xml->toplevel->CompleteSuggestion;
-
-echo $xml[0]->suggestion->data;
+$curl = curl_init();
+curl_setopt($curl, CURLOPT_URL,$url);
+curl_setopt($ch,CURLOPT_POST,count($fields));
+curl_setopt($ch,CURLOPT_POSTFIELDS,$fields_string);
+$response = curl_exec ($curl);
+curl_close ($curl);
+echo $response;
+$rxml = simplexml_load_string($response);
+echo $rxml->title;
 ?>
