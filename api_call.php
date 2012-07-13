@@ -45,6 +45,7 @@ function do_search($tag) {
   $url = "http://www.google.co.in/s?hl=en&q=how%20to%20get%20which%20adr";
 
   $feed = getResource($url);
+  echo $feed;
   $xml = simplexml_load_string($feed);
   print $xml;
   print "<p>Total number of photos for {$tag}: {$xml->photos['total']}</p>";
