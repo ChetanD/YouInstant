@@ -31,7 +31,7 @@ function getResource($url){
   curl_setopt($chandle, CURLOPT_RETURNTRANSFER, 1);
   $result = curl_exec($chandle);
   curl_close($chandle);
-
+  echo "demo".$result;
   return $result;
 }
 
@@ -46,6 +46,7 @@ function do_search($tag) {
 
   $feed = getResource($url);
   $xml = simplexml_load_string($feed);
+  
   print "<p>Total number of photos for {$tag}: {$xml->photos['total']}</p>";
 
 # http://www.flickr.com/services/api/misc.urls.html
