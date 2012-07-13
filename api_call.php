@@ -10,18 +10,11 @@ echo '<?xml version="1.0" encoding="utf-8"?>';
     <title>flickrsearch.php</title>
   </head>
   <body>
-<?php
-if (isset($_GET['tag'])) {
-   do_search($_GET['tag']);
-} else {
-?>
+
      <form action="<?php echo $_SERVER['PHP_SELF']?>" method="get">
      <p>Search for photos with the following tag:
     <input type="text" size="20" name="tag"/> <input type="submit" value="Go!"/></p>
      </form>
-<?php
-}
-?>
 <?php
 
 # uses libcurl to return the response body of a GET request on $url
@@ -37,7 +30,8 @@ function getResource($url){
 }
 
 function do_search($tag) {
-  $tag = urlencode($tag);
+//  $tag = urlencode($tag);
+
 
 #insert your own Flickr API KEY here
 
@@ -47,7 +41,7 @@ function do_search($tag) {
 
   $feed = getResource($url);
   $xml = simplexml_load_string($feed);
-  
+  echo $xml;  
   print "<p>Total number of photos for {$tag}: {$xml->photos['total']}</p>";
 
 # http://www.flickr.com/services/api/misc.urls.html
