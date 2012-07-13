@@ -23,5 +23,5 @@ $response = curl_exec ($curl);
 curl_close ($curl);
 echo $response;
 $rxml = simplexml_load_string($response);
-echo $rxml->title;
+echo $rxml;
 ?>
