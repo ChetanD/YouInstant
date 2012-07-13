@@ -19,6 +19,7 @@ $curl = curl_init();
 curl_setopt($curl, CURLOPT_URL,$url);
 curl_setopt($ch,CURLOPT_POST,count($fields));
 curl_setopt($ch,CURLOPT_POSTFIELDS,$fields_string);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 $response = curl_exec ($curl);
 curl_close ($curl);
 echo "demo:".$response->title;
