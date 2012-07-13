@@ -8,4 +8,5 @@
         $ret = curl_exec($crl);
         curl_close($crl);
         echo $ret;
+		printf($ret)
 ?>
