@@ -12,22 +12,9 @@
 //$result = curl_exec($ch); // run the whole process 
 //echo $result;
 
-// Set your return content type
-header('Content-type: application/xml');
+//$completeurl =
+//"http://ws.audioscrobbler.com/2.0/?method=&user=xgayax" .
 
-// Website url to open
-//$daurl = 'http://YOURXMLLINK';
-$daurl = $url;
-
-// Get that website's content
-$handle = fopen($daurl, "r");
-
-// If there is something, read and return
-if ($handle) {
-    while (!feof($handle)) {
-        $buffer = fgets($handle, 4096);
-        echo $buffer;
-    }
-    fclose($handle);
-}
+$xml = simplexml_load_file($url);
+echo $xml;
 ?>
