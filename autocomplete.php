@@ -20,7 +20,7 @@ echo $info;*
  $response=var_dump($response);
  echo $response[0];
  */
- $ch = curl_init('www.google.com');
+ $ch = curl_init($url);
 	curl_setopt($ch, CURLOPT_USERAGENT, $userAgent);
 	curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
 	curl_setopt($ch, CURLOPT_URL, $connection_url);
