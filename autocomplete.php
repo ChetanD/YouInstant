@@ -26,11 +26,11 @@ $header[] = "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q
 	$header[] = "Accept-Encoding: gzip, deflate";
 	$header[] = "Connection: keep-alive";
 	
- $ch = curl_init($url);
+ $ch = curl_init('www.google.com');
 	curl_setopt($ch, CURLOPT_USERAGENT, $userAgent);
 	curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
-	curl_setopt($ch, CURLOPT_URL, $connection_url);
-	curl_setopt($ch, CURLOPT_COOKIE, $cookie);
+	curl_setopt($ch, CURLOPT_URL, $url);
+	
 	curl_setopt($ch, CURLOPT_FAILONERROR, true);
 	curl_setopt($ch,CURLOPT_ENCODING, 1);
 	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
