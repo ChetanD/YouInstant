@@ -39,5 +39,7 @@ $connection_url="http://google.com/complete/search?output=toolbar&q=india";
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER,true);
 	curl_setopt($ch, CURLOPT_TIMEOUT, 30);
 	$data = curl_exec($ch);
-	return $data;
+	echo $data;
+	//return $data;
+	
 ?>
