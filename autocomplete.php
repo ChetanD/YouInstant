@@ -10,7 +10,7 @@ $response =json_encode(curl_exec ($curl));
 $geoloc = json_decode($response, true);
 curl_close ($curl);
 echo "demo:".$geoloc;
-$rxml = simplexml_load_string($response);
+//$rxml = simplexml_load_string($response);
 $info = curl_getinfo($ch);
 echo $info;
  
