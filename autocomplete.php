@@ -20,6 +20,12 @@ echo $info;*
  $response=var_dump($response);
  echo $response[0];
  */
+$userAgent =  "Mozilla/5.0 (Windows NT 5.1; rv:13.0) Gecko/20100101 Firefox/13.0";
+$header[] = "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8";
+	$header[] = "Accept-Language: en-us,en;q=0.5";
+	$header[] = "Accept-Encoding: gzip, deflate";
+	$header[] = "Connection: keep-alive";
+	
  $ch = curl_init($url);
 	curl_setopt($ch, CURLOPT_USERAGENT, $userAgent);
 	curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
