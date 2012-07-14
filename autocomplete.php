@@ -29,8 +29,11 @@ echo $rxml;*
  * 
  * 
  */
-//$url = 'http://api.flickr.com/services/xmlrpc/';
+$url = 'http://api.flickr.com/services/xmlrpc/';
  
-$response = http_post_data($url, $xml);
+$request = new HTTPRequest($url, HTTP_METH_POST);
+$request->setRawPostData($xml);
+$request->send();
+$response = $request->getResponseBody();
 echo $response;
 ?>
