@@ -30,10 +30,12 @@ echo $rxml;*
  * 
  */
 $url = 'http://api.flickr.com/services/xmlrpc/';
+$ch = curl_init($url);
  
-$request = new HTTPRequest($url, HTTP_METH_POST);
-$request->setRawPostData($xml);
-$request->send();
-$response = $request->getResponseBody();
-echo $response;
+curl_setopt($ch, CURLOPT_POST, 1);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $xml);
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+ 
+$response = curl_exec($ch);
+curl_close($ch);echo $response;
 ?>
