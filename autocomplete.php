@@ -6,10 +6,10 @@ curl_setopt($curl, CURLOPT_URL,$url);
 curl_setopt($ch,CURLOPT_POST,count($fields));
 curl_setopt($ch,CURLOPT_POSTFIELDS,$fields_string);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-$response =json_encode(curl_exec ($curl));
-$geoloc = json_decode($response, true);
+$response =(curl_exec ($curl));
+
 curl_close ($curl);
-echo "demo:".$geoloc;
+echo "demo:".$response;
 //$rxml = simplexml_load_string($response);
 $info = curl_getinfo($ch);
 echo $info;
