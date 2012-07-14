@@ -17,7 +17,7 @@ echo $info;*
  */
 
  $response =file_get_contents($url);
- print $response;
+ $response=var_dump($response);
  echo $response;
  
 ?>
