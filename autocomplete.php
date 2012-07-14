@@ -14,7 +14,7 @@
 
 //$completeurl =
 //"http://ws.audioscrobbler.com/2.0/?method=&user=xgayax" .
-
+/*
 $curl = curl_init();
 curl_setopt($curl, CURLOPT_URL,$url);
 curl_setopt($ch,CURLOPT_POST,count($fields));
@@ -25,5 +25,11 @@ $geoloc = json_decode($response, true);
 curl_close ($curl);
 echo "demo:".$geoloc;
 $rxml = simplexml_load_string($response);
-echo $rxml;
+echo $rxml;*
+ * 
+ * 
+ */
+
+ $xml = file_get_contents($url);
+ echo $xml;
 ?>
