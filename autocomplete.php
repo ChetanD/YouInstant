@@ -18,6 +18,6 @@ echo $info;*
 
  $response =file_get_contents($url);
  $response=var_dump($response);
- echo $response;
+ echo $response[0];
  
 ?>
