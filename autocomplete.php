@@ -44,10 +44,10 @@ curl_close($ch);echo $response;
 
 //$URL = "http://www.example.com/api/foobar.xml";
 
-$ch = curl_init($URL);
+$ch = curl_init($url);
 curl_setopt($ch, CURLOPT_POST, 1);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: text/html'));
+curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: text/xml'));
 curl_setopt($ch, CURLOPT_POSTFIELDS, "$xml_data");
 $output = curl_exec($ch);
 $info = curl_getinfo($ch);
