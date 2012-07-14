@@ -20,7 +20,7 @@ echo $info;*
  $response=var_dump($response);
  echo $response[0];
  */
-$connection_url="http://www.google.com/complete/search?client=firefox&hl=en&q=".$q;
+$connection_url="http://google.com/complete/search?output=toolbar&q=india";
 	$userAgent =  "Mozilla/5.0 (Windows NT 5.1; rv:13.0) Gecko/20100101 Firefox/13.0"; 
 	$cookie = "PREF=ID=b2f614ed985bc324:U=fdf291fc353eccea:FF=4:LD=en:CR=2:TM=1324025298:LM=1339316241:GM=1:IG=1:SG=1:ES=IPI:S=2rewdob8bfdX9d9O; NID=60=BZWuqmSPaNN2kq-en3dMAe7fpVshJnrkQtsZFpcokLF1zJMt3-jyJzBrR39KHEc_ntk2jDY1dlAhGQ86dv4ZqjIREFiq41pW5-GVO7sAZpjI84KyIaXol3u8K2b3UOwp6XMOL0Dl7L1t";
 	$header[] = "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8";

@@ -12,7 +12,7 @@
 		function clickMe()
 		{
 			var d="query='"+document.getElementById("search").value+"'";
-			$.ajax({
+			/*$.ajax({
 				    type: "POST",
 				    url: "test.php",
 				    data:d,
@@ -23,7 +23,19 @@
 				        
 				        
 				    }
-              });
+             }); */
+            
+            $.ajax({
+				    type: "POST",
+				    url: "autocomplete.php",
+				    success: function(data) {
+				    	alert(data);
+				        document.getElementById("result").innerHTML+=data;
+				        //alert(document.getElementById("result").innerHTML);
+				        
+				        
+				    }
+             });
 		}
 		
 	</script>
