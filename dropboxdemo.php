@@ -17,7 +17,7 @@ $oauth = new Dropbox_OAuth_PHP($consumerKey, $consumerSecret);
 $dropbox = new Dropbox_API($oauth);
 $oauth = new Dropbox_OAuth_PHP($consumerKey, $consumerSecret);
 $dropbox = new Dropbox_API($oauth);
-
+/*
 // For convenience, definitely not required
 header('Content-Type: text/plain');
 
@@ -31,7 +31,7 @@ if (isset($_SESSION['state'])) {
     $state = 1;
 }
 echo $state;
-/*
+
 switch($state) {
 
     /* In this phase we grab the initial request tokens
