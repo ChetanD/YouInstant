@@ -30,8 +30,7 @@ if (isset($_SESSION['state'])) {
 } else {
     $state = 1;
 }
-echo $_SESSION['state'];
-
+echo $state;
 /*
 switch($state) {
 
