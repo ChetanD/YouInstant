@@ -6,8 +6,8 @@ $consumerKey = '6e6z7auri0u0rct';
 $consumerSecret = 'kclsoe4oged57d7';
 
 include 'Dropbox/autoload.php';
-echo $consumerKey;
-/*session_start();
+
+session_start();
 $oauth = new Dropbox_OAuth_PHP($consumerKey, $consumerSecret);
 
 // If the PHP OAuth extension is not available, you can try
@@ -22,7 +22,7 @@ $dropbox = new Dropbox_API($oauth);
 header('Content-Type: text/plain');
 
 // We need to start a session
-session_start();
+//session_start();
 
 // There are multiple steps in this workflow, we keep a 'state number' here
 if (isset($_SESSION['state'])) {
@@ -30,7 +30,9 @@ if (isset($_SESSION['state'])) {
 } else {
     $state = 1;
 }
+echo $_SESSION['state'];
 
+/*
 switch($state) {
 
     /* In this phase we grab the initial request tokens
