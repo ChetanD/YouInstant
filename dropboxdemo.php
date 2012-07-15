@@ -6,8 +6,8 @@ $consumerKey = '6e6z7auri0u0rct';
 $consumerSecret = 'kclsoe4oged57d7';
 
 include 'Dropbox/autoload.php';
-
-session_start();
+echo $consumerKey;
+/*session_start();
 $oauth = new Dropbox_OAuth_PHP($consumerKey, $consumerSecret);
 
 // If the PHP OAuth extension is not available, you can try
@@ -35,7 +35,7 @@ switch($state) {
 
     /* In this phase we grab the initial request tokens
        and redirect the user to the 'authorize' page hosted
-       on dropbox */
+       on dropbox 
     case 1 :
         echo "Step 1: Acquire request tokens\n";
         $tokens = $oauth->getRequestToken();
@@ -50,7 +50,7 @@ switch($state) {
         die();
 
     /* In this phase, the user just came back from authorizing
-       and we're going to fetch the real access tokens */
+       and we're going to fetch the real access tokens 
     case 2 :
         echo "Step 3: Acquiring access tokens\n";
         $oauth->setToken($_SESSION['oauth_tokens']);
@@ -62,7 +62,7 @@ switch($state) {
 
     /* This part gets called if the authentication process
        already succeeded. We can use our stored tokens and the api 
-       should work. Store these tokens somewhere, like a database */
+       should work. Store these tokens somewhere, like a database 
     case 3 :
         echo "The user is authenticated\n";
         echo "You should really save the oauth tokens somewhere, so the first steps will no longer be needed\n";
@@ -71,5 +71,5 @@ switch($state) {
         break;
 }
 
-
+*/
 ?>
