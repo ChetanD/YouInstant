@@ -1,5 +1,7 @@
 <?php
 /* Please supply your own consumer key and consumer secret */
+
+echo "chetan";
 $consumerKey = '6e6z7auri0u0rct';
 $consumerSecret = 'kclsoe4oged57d7';
 
