@@ -17,6 +17,7 @@ $oauth = new Dropbox_OAuth_PHP($consumerKey, $consumerSecret);
 $dropbox = new Dropbox_API($oauth);
 $oauth = new Dropbox_OAuth_PHP($consumerKey, $consumerSecret);
 $dropbox = new Dropbox_API($oauth);
+echo $dropbox;
 /*
 // For convenience, definitely not required
 header('Content-Type: text/plain');
