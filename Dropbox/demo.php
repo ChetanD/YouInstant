@@ -11,7 +11,7 @@
 	
 	$oauth=new DropboxOAuth($consumer_key,$consumer_secret,$request['oauth_token'],$request['oauth_token_secret']);
 	$token=$oauth->getAccessToken();
-	echo $token["oauth_token"];
+	echo $request["oauth_token"];
 	
 	//$account = $oauth->get("https://api.dropbox.com/1/account/info");
 	
