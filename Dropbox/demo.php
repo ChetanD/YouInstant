@@ -8,4 +8,7 @@
 	$request = $oauth->getRequestToken($callback_url);
 
 	$url = $oauth->getAuthorizeURL($request);
+	
+	echo "request token"
+	
 ?>
