@@ -9,6 +9,6 @@
 
 	$url = $oauth->getAuthorizeURL($request);
 	
-	echo "request token"
+	echo $url;
 	
 ?>
