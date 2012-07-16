@@ -13,7 +13,7 @@
 	$token=$oauth->getAccessToken();
 	echo $token["oauth_token"];
 	
-	$account = $oauth->get("https://api.dropbox.com/1/account/info");
+	//$account = $oauth->get("https://api.dropbox.com/1/account/info");
 	
 	
 	
