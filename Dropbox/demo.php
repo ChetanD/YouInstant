@@ -6,9 +6,11 @@
 	$oauth = new DropboxOAuth($consumer_key,$consumer_secret);
 
 	$request = $oauth->getRequestToken($callback_url);
-
+   
 	$url = $oauth->getAuthorizeURL($request);
-	
-	echo $url;
+	echo $request;
+	$oauth=new DropboxOAuth($consumer_key,$consumer_secret,$request['oauth_token'],$request['oauth_token_secret']);
+	$token=$oauth->getAccessToken();
+	echo $token;
 	
 ?>
