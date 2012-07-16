@@ -223,5 +223,10 @@ class DropboxOAuth
 		return strlen($header);
 	}
 	
+	function getinfo()
+	{
+		
+	}
+	
 }
 
