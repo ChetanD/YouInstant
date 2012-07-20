@@ -67,17 +67,21 @@ if (isset($_REQUEST["q"]) && isset($_REQUEST["c"])) {
 			$youtube = new youtube();
 			$data = $youtube->get($url);
 			$arr = json_decode($data, true);
-			echo "[\"$url\",[";
+
 			$c = count($arr[1]);
 			$i = 1;
+			
 			foreach($arr[1] as $item) {
-				echo "\"".$item[0]."\"";
+				echo $item[0];
 					if ($i < $c) {
 						echo ",";
 					}
+					if($i==1){
+						$data=$item[0];
+					}
 					$i++;
 			}
-			echo "]]";
+			
 			break;
 		case 'gm':
 			$gmaps = new gmaps();
