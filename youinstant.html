@@ -302,8 +302,10 @@
   	              	  
   	       });
   	    //$( "#resizable" ).resizable( "option", "alsoResize", ".rightbar" );*/
-  	   var vlink="http://www.youtube.com/embed/MUYqliUMpnA";
-  	
+  	   var vlink="http://youtu.be/YmivnlR4w9U";
+  	  var embed='<iframe width="620" height="400"  src="'+vlink+'" frameborder="0" allowfullscreen></iframe>';
+	  document.getElementById("llink").value=vlink;
+	  document.getElementById("tembed").value=embed;
   }
   
   function hover(that){
@@ -421,7 +423,7 @@
 <div style="height: 20%;width: 100%;"  class="upperdiv" >
 	<div class="pname">YouInstant<sup style="font-size: 12px">Beta</sup></div>
 	<div class="search">
-		<input type="text" id="keyword" onkeyup="search();"/>
+		<input type="text" id="keyword" onkeyup="search();" placeholder="Enter your query here"/>
 	</div>
 </div>
 <br />
@@ -438,7 +440,7 @@
 <div class="mainarea" >
 	
 	<div class="space"></div>
-	<iframe width="620" height="400"  src="http://www.youtube.com/embed/MUYqliUMpnA" frameborder="0" allowfullscreen id="mainvedio" class="subvedio">Chetan</iframe>
+	<iframe width="620" height="400"  src="http://youtu.be/YmivnlR4w9U" frameborder="0" allowfullscreen id="mainvedio" class="subvedio">Chetan</iframe>
 	<br />
 	<div class="useit">
 		 <div>
