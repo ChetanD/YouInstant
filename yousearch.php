@@ -20,7 +20,7 @@ class seayoutube{
       	  $thumbnail = $attrs['url'];
 		  $ret.=$embededlink."`".$media->group->title."`".$thumbnail."`";
 		  $i++;
-		   if($i==6)
+		   if($i==5)
 		   {
 		   	break;
 		   }	
