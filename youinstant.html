@@ -402,7 +402,14 @@
   function shift(that)
   {
   	that=that.parentNode;
-  	alert("demo:"+that.id);
+  	if(document.getElementById("mainvedio").getAttribute("src")!=that.id)
+  	{
+	  	document.getElementById("mainvedio").setAttribute("src",that.id);
+		var embed='<iframe width="620" height="400"  src="'+that.id+'" frameborder="0" allowfullscreen></iframe>';
+		document.getElementById("llink").value=that.id;
+		document.getElementById("tembed").value=embed;
+	}	
+		
   }
   </script>
 </head>
