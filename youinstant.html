@@ -292,7 +292,7 @@
 	<script src="http://jqueryui.com/ui/jquery.ui.resizable.js"></script>
 	<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-500888041582a569"></script>
   <script type="text/javascript">
-  
+  var ajaxcall=null;
   	 $(document).ready(function(){
 	});
   function load()  {
@@ -315,13 +315,21 @@
   }
   
   function search(){
+  	if(ajaxcall!=null)
+  	{
+  		ajaxcall.abort();
+  	}
+  	else
+  	{
+  		alert("demo");
+  	}
   	 var term=document.getElementById("keyword").value;
   	 var p=document.getElementById("dolist");
 	 p.innerHTML="";
   	  if(term!="")
   	  {
 	  	 var company="yt";
-	  	 $.ajax({
+	  	 ajaxcall=$.ajax({
 						url: "search.php",
 						data: {
 	                        "q" : term,
