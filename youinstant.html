@@ -327,6 +327,13 @@
 					success: function( data ) {
 					
 					alert(data[1]);
+					data=data[1].Split(',');
+		//			<label class="autocomplete" onmouseover="hover(this)">chetan yuvraj dhemrbe</label>
+		            var p=document.getElementById("resizable"); 
+					  for(var i=0;i<data.length;i++)
+					  {
+			              p.innerHTML+='<label class="autocomplete" onmouseover="hover(this)">"'+data[i]+'"</label>';   		  	
+					  }
 			       }
 			 		
 			});
@@ -347,10 +354,7 @@
 		<label style="text-align: center;margin-left: 25%" >Do you mean</label>
 	</div>
 		
-		<label class="autocomplete" onmouseover="hover(this)">chetan yuvraj dhemrbe</label>
-		<label class="autocomplete" onmouseover="hover(this)">Modern Education society's college of engineering</label>
-		<label class="autocomplete" onmouseover="hover(this)">Computer engineering</label>
-		<label class="autocomplete" onmouseover="hover(this)">KL-2 sector-6E building no-25 room no-4 kalamboli tal-panvel Dist-raigad</label>
+		
 	
 </div>
 <div class="mainarea" >
