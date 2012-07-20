@@ -316,29 +316,33 @@
   
   function search(){
   	 var term=document.getElementById("keyword").value;
-  	 var company="yt";
-  	 $.ajax({
-					url: "search.php",
-					dataType: "json",
-					data: {
-                        "q" : term,
-						"c" : company 
-					},
-					success: function( data ) {
-					
-					var d=data[1].toString();
-					data=d.split(',');
-					
-		//			<label class="autocomplete" onmouseover="hover(this)">chetan yuvraj dhemrbe</label>
-		            var p=document.getElementById("dolist");
-		             p.innerHTML="";
-					  for(var i=0;i<data.length;i++)
-					  {
-			              p.innerHTML+='<label class="autocomplete" onmouseover="hover(this)">'+data[i]+'</label>';   		  	
-					  }
-			       }
-			 		
-			});
+  	 var p=document.getElementById("dolist");
+	 p.innerHTML="";
+  	  if(term!="")
+  	  {
+	  	 var company="yt";
+	  	 $.ajax({
+						url: "search.php",
+						dataType: "json",
+						data: {
+	                        "q" : term,
+							"c" : company 
+						},
+						success: function( data ) {
+						
+						var d=data[1].toString();
+						data=d.split(',');
+						
+			//			<label class="autocomplete" onmouseover="hover(this)">chetan yuvraj dhemrbe</label>
+			       
+						  for(var i=0;i<data.length;i++)
+						  {
+				              p.innerHTML+='<label class="autocomplete" onmouseover="hover(this)">'+data[i]+'</label>';   		  	
+						  }
+				       }
+				 		
+				});
+		}
   }
   </script>
 </head>
