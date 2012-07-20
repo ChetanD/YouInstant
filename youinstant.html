@@ -303,9 +303,7 @@
   	       });
   	    //$( "#resizable" ).resizable( "option", "alsoResize", ".rightbar" );*/
   	   var vlink="http://www.youtube.com/embed/MUYqliUMpnA";
-  	   var embed='<iframe width="620" height="400"  src="'+vlink+'" frameborder="0" allowfullscreen></iframe>';
-  	   document.getElementById("llink").value=vlink;
-  	   document.getElementById("tembed").value=embed;
+  	
   }
   
   function hover(that){
@@ -337,7 +335,7 @@
 						var d=data.toString();
 						data=d.split(',');
 						
-			//			<label class="autocomplete" onmouseover="hover(this)">chetan yuvraj dhemrbe</label>
+	
 			             p.innerHTML="";
 						  for(var i=0;i<data.length-1;i++)
 						  {
@@ -345,6 +343,9 @@
 						  }
 						  
 						  document.getElementById("mainvedio").setAttribute("src",data[i]);
+						  var embed='<iframe width="620" height="400"  src="'+data[i]+'" frameborder="0" allowfullscreen></iframe>';
+					  	  document.getElementById("llink").value=data[i];
+					  	  document.getElementById("tembed").value=embed;
 				       }
 				 		
 				});
