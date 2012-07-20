@@ -308,19 +308,18 @@
 	  document.getElementById("tembed").value=embed;
   }
   
-  function hover(that){
-  	var title=that.innerHTML;
-  	
-  	that.title=title;
+  function entersearch()
+  {
+  	search(document.getElementById("keyword").value);
   }
   
-  function search(){
+  function search(term){
   	if(ajaxcall!=null)
   	{
   		ajaxcall.abort();
   	}
   	
-  	 var term=document.getElementById("keyword").value;
+  	 
   	 var p=document.getElementById("dolist");
 	 p.innerHTML="";
   	  if(term!="")
@@ -341,7 +340,7 @@
 			             p.innerHTML="";
 						  for(var i=0;i<data.length-1;i++)
 						  {
-				              p.innerHTML+='<label class="autocomplete" onmouseover="hover(this)">'+data[i]+'</label>';   		  	
+				              p.innerHTML+='<label class="autocomplete"  tittle='+data[i]+'>'+data[i]+'</label>';   		  	
 						  }
 						  
 						  var d=data[i].toString();
@@ -423,7 +422,7 @@
 <div style="height: 20%;width: 100%;"  class="upperdiv" >
 	<div class="pname">YouInstant<sup style="font-size: 12px">Beta</sup></div>
 	<div class="search">
-		<input type="text" id="keyword" onkeyup="search();" placeholder="Enter your query here"/>
+		<input type="text" id="keyword" onkeyup="entersearch();" placeholder="Enter your query here"/>
 	</div>
 </div>
 <br />
