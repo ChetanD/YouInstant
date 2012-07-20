@@ -342,8 +342,8 @@
 				              p.innerHTML+='<label class="autocomplete" onmouseover="hover(this)">'+data[i]+'</label>';   		  	
 						  }
 						  
-						  
-						  data=data[i].split("&")
+						  var d=data[i].toString;
+						  data=d.split("&")
 						  var v=document.getElementById("vediolist");
 						  alert(data[0]);
 						   for(var i=0;i<data.length-2;)
