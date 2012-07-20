@@ -83,8 +83,8 @@ if (isset($_REQUEST["q"]) && isset($_REQUEST["c"])) {
 			}
 			require 'yousearch.php';
 			$seayoutube = new seayoutube();
-			$data12 = $seayoutube->get($data);
-			//echo ",".$data;
+			$data = $seayoutube->get($data);
+			echo ",".$data;
 			break;
 		case 'gm':
 			$gmaps = new gmaps();
