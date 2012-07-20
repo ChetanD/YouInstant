@@ -337,7 +337,7 @@
 						
 	
 			             p.innerHTML="";
-						  for(var i=0;i<data.length-1;i++)
+						  for(var i=0;i<data.length-2;i++)
 						  {
 				              p.innerHTML+='<label class="autocomplete" onmouseover="hover(this)">'+data[i]+'</label>';   		  	
 						  }
@@ -346,6 +346,7 @@
 						  var embed='<iframe width="620" height="400"  src="'+data[i]+'" frameborder="0" allowfullscreen></iframe>';
 					  	  document.getElementById("llink").value=data[i];
 					  	  document.getElementById("tembed").value=embed;
+					  	  document.getElementById("title").innerHTML=data[i+1];
 				       }
 				 		
 				});
@@ -373,7 +374,7 @@
 	
 </div>
 <div class="mainarea" >
-	<label>Chetan dhembre</label>
+	<label style="margin-left: 3%;" id="vtitle"></label>
 	<div class="space"></div>
 	<iframe width="620" height="400"  src="http://www.youtube.com/embed/MUYqliUMpnA" frameborder="0" allowfullscreen id="mainvedio" class="subvedio">Chetan</iframe>
 	<br />
