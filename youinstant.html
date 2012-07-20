@@ -40,6 +40,10 @@
 	    width: 350px;
 	    
   	 }
+  	 
+  	 .overlaybutton{
+  	 	margin-left: 2%;
+  	 }
   	 .leftbar{
   	 	float: left;
   	 	width:20%;
@@ -277,6 +281,13 @@
   	 	
   	 	
   	 }
+  	 
+  	 .overlay{
+  	    background-color: black;
+  	    opacity: 0.4;
+  	    z-index: 1000;
+  	    display: none; 	
+  	 }
   </style>
   
   
@@ -422,6 +433,11 @@
 	}	
 		
   }
+  
+  function applyoverlay(){
+  	 alert("overlay");
+  }
+  
   </script>
 </head>
 
@@ -430,6 +446,9 @@
 	<div class="pname">YouInstant<sup style="font-size: 12px">Beta</sup></div>
 	<div class="search">
 		<input type="text" id="keyword" onkeyup="entersearch();" placeholder="Enter your query here"/>
+	</div>
+	<div class="overlaybutton">
+		<input type="button" onclick="applyoverlay();"/>
 	</div>
 </div>
 <br />
@@ -515,6 +534,6 @@
 	
 	
 </div>
-
+<div class="overlay"></div>
 </body>
 </html>
