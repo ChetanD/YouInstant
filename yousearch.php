@@ -18,7 +18,7 @@ class seayoutube{
 		  $media = $entry->children('http://search.yahoo.com/mrss/');
 		  $attrs = $media->group->thumbnail[0]->attributes();
       	  $thumbnail = $attrs['url'];
-		  $ret.=$embededlink."&".$media->group->title."&".$thumbnail."&";
+		  $ret.=$embededlink."`".$media->group->title."`".$thumbnail."`";
 		  $i++;
 		   if($i==5)
 		   {
