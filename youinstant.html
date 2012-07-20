@@ -314,7 +314,7 @@
   }
   
   function selectoption(that){
-  	document.getElementById("keyword").value=that.tittle;
+  	document.getElementById("keyword").value=that.getAttribute("tittle");
   	//search(that.tittle);
   	
   }
@@ -345,7 +345,7 @@
 			             p.innerHTML="";
 						  for(var i=0;i<data.length-1;i++)
 						  {
-				              p.innerHTML+='<label class="autocomplete"  tittle='+data[i]+' onclick="selectoption(this);">'+data[i]+'</label>';   		  	
+				              p.innerHTML+='<label class="autocomplete"  tittle="demo" onclick="selectoption(this);">'+data[i]+'</label>';   		  	
 						  }
 						  
 						  var d=data[i].toString();
