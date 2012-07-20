@@ -369,6 +369,7 @@
 						   	 var dtag=document.createElement("div")
 						   	 dtag.className="vlist";
 						   	 dtag.nodeName=d[i-2];
+						   	 dtag.onclick="shift(this)";
 						   	 var imgtag=document.createElement("img");
 						   	 imgtag.setAttribute("width","140");
 						   	 imgtag.setAttribute("height","100");
@@ -395,11 +396,16 @@
 				});
 		}
   }
+  
+  function shift(that)
+  {
+  	alert("demo:"+that.name);
+  }
   </script>
 </head>
 
 <body onload="load();" class="bd">
-<div style="height: 20%;width: 100%;"  class="upperdiv">
+<div style="height: 20%;width: 100%;"  class="upperdiv" >
 	<div class="pname">YouInstant</div>
 	<div class="search">
 		<input type="text" id="keyword" onkeyup="search();"/>
