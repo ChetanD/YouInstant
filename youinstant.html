@@ -314,7 +314,9 @@
   }
   
   function selectoption(that){
-  	search(that.tittle);
+  	document.getElementById("keyword").value=that.tittle;
+  	//search(that.tittle);
+  	
   }
   function search(term){
   	if(ajaxcall!=null)
