@@ -6,6 +6,7 @@ class seayoutube{
 	   $feedURL = "http://gdata.youtube.com/feeds/api/videos/-/".$q."?orderby=viewCount&max-results=5";
 	   $sxml = simplexml_load_file($feedURL);
 	   $ret="";
+	   $i=0;
 	   foreach ($sxml->entry as $entry) {
 		  $id=$entry->id;
 		  $demo=(string)$id;
@@ -17,7 +18,12 @@ class seayoutube{
 		  $media = $entry->children('http://search.yahoo.com/mrss/');
 		  $attrs = $media->group->thumbnail[0]->attributes();
       	  $thumbnail = $attrs['url'];
-		  $ret.=$embededlink."&".$media->group->title."&".$thumbnail."&";	
+		  $ret.=$embededlink."&".$media->group->title."&".$thumbnail."&";
+		  $i++;
+		   if($i==5)
+		   {
+		   	break;
+		   }	
 		}
 	   
 	   return $ret;
