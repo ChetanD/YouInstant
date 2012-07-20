@@ -331,10 +331,10 @@
 					
 		//			<label class="autocomplete" onmouseover="hover(this)">chetan yuvraj dhemrbe</label>
 		            var p=document.getElementById("dolist");
-		             
+		             p.innerHTML="";
 					  for(var i=0;i<data.length;i++)
 					  {
-			              p.innerHTML+='<label class="autocomplete" onmouseover="hover(this)">"'+data[i]+'"</label>';   		  	
+			              p.innerHTML+='<label class="autocomplete" onmouseover="hover(this)">'+data[i]+'</label>';   		  	
 					  }
 			       }
 			 		
