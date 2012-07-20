@@ -13,7 +13,7 @@ class seayoutube{
 		  
 		  //http://www.youtube.com/embed/dP15zlyra3c?html5=1
 		  $embededlink="http://www.youtube.com/embed/".$demo1[count($demo1)-1]."?autoplay=1&html5=1";
-		  $ret=$embededlink."~".$_REQUEST["count"];
+		  $ret=$embededlink;
 	      echo $ret;	
 		}
     }
