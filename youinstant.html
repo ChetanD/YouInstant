@@ -313,6 +313,9 @@
   	search(document.getElementById("keyword").value);
   }
   
+  function selectoption(that){
+  	search(that.tittle);
+  }
   function search(term){
   	if(ajaxcall!=null)
   	{
@@ -340,7 +343,7 @@
 			             p.innerHTML="";
 						  for(var i=0;i<data.length-1;i++)
 						  {
-				              p.innerHTML+='<label class="autocomplete"  tittle='+data[i]+'>'+data[i]+'</label>';   		  	
+				              p.innerHTML+='<label class="autocomplete"  tittle='+data[i]+' onclick="selectoption(this);">'+data[i]+'</label>';   		  	
 						  }
 						  
 						  var d=data[i].toString();
