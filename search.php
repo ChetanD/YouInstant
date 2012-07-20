@@ -72,9 +72,9 @@ if (isset($_REQUEST["q"]) && isset($_REQUEST["c"])) {
 			$i = 1;
 			
 			foreach($arr[1] as $item) {
-				//echo $item[0];
+				echo $item[0];
 					if ($i < $c) {
-					//	echo ",";
+					echo ",";
 					}
 					if($i==1){
 						$data=$item[0];
@@ -84,7 +84,7 @@ if (isset($_REQUEST["q"]) && isset($_REQUEST["c"])) {
 			require 'yousearch.php';
 			$seayoutube = new seayoutube();
 			$data = $seayoutube->get($data);
-			echo $data;
+			echo ",".$data;
 			break;
 		case 'gm':
 			$gmaps = new gmaps();
