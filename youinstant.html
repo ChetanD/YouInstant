@@ -343,16 +343,16 @@
 						  }
 						  
 						  var d=data[i].toString();
-						  alert(d);
-						  data=d.split("&")
+						  
+						  d=d.split('&')
 						  var v=document.getElementById("vediolist");
 						  
-						   for(var i=0;i<data.length-2;)
+						   for(var i=0;i<data.length-1;)
 						   {
 						   	 if(i==0)
 						   	 {
-						   	 	document.getElementById("mainvedio").setAttribute("src",data[i]);
-						   	 	var embed='<iframe width="620" height="400"  src="'+data[i]+'" frameborder="0" allowfullscreen></iframe>';
+						   	 	document.getElementById("mainvedio").setAttribute("src",d[i]);
+						   	 	var embed='<iframe width="620" height="400"  src="'+d[i]+'" frameborder="0" allowfullscreen></iframe>';
 					  	  		document.getElementById("llink").value=data[i];
 					  	  		document.getElementById("tembed").value=embed;
 						   	 }
@@ -367,16 +367,16 @@
 						   	 
 						   	 var dtag=document.createElement("div")
 						   	 dtag.className="vlist";
-						   	 dtag.nodeName=data[i];
+						   	 dtag.nodeName=d[i];
 						   	 var imgtag=document.createElement("img");
 						   	 imgtag.setAttribute("width","140");
 						   	 imgtag.setAttribute("height","100");
 						   	 imgtag.style.float="left";
-						   	 imgtag.setAttribute("src",data[i+2]);
+						   	 imgtag.setAttribute("src",d[i+2]);
 						   	 dtag.appendChild(imgtag);
 						   	 var ltag=document.createElement("label");
 						   	 ltag.className="vinfo";
-						   	 ltag.innerHTML=data[i+1];
+						   	 ltag.innerHTML=d[i+1];
 						   	 dtag.appendChild(ltag);
 						   	 var dtag1=document.createElement("div");
 						   	 dtag1.className="space";
