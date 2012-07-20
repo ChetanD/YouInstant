@@ -328,13 +328,13 @@
 					
 					var d=data[1].toString();
 					data=d.split(',');
-					alert(data[1]);
+					
 		//			<label class="autocomplete" onmouseover="hover(this)">chetan yuvraj dhemrbe</label>
 		            var p=document.getElementById("dolist");
-		            p.innerHTML+='<label class="autocomplete" onmouseover="hover(this)">"'+data.length+'"</label>'; 
+		             
 					  for(var i=0;i<data.length;i++)
 					  {
-			              p.innerHTML+='<label class="autocomplete" onmouseover="hover(this)">chetan yuvraj dhembre</label>';   		  	
+			              p.innerHTML+='<label class="autocomplete" onmouseover="hover(this)">"'+data[i]+'"</label>';   		  	
 					  }
 			       }
 			 		
@@ -356,7 +356,7 @@
 		<label style="text-align: center;margin-left: 25%" >Do you mean</label>
 	</div>
 	<div id="dolist">
-			<label class="autocomplete" onmouseover="hover(this)">chetan yuvraj dhemrbe</label>
+			
 	</div>	
 		
 	
