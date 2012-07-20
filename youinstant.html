@@ -313,6 +313,23 @@
   	
   	that.title=title;
   }
+  
+  function search(){
+  	 var term=document.getElementById("keyword").value;
+  	 $.ajax({
+					url: "search.php",
+					dataType: "json",
+					data: {
+                        "q" : request.term,
+						"c" : "yt"
+					},
+					success: function( data ) {
+					
+					alert(data[1]);
+			       }
+			 		
+			});
+  }
   </script>
 </head>
 
@@ -320,7 +337,7 @@
 <div style="height: 20%;width: 100%;"  class="upperdiv">
 	<div class="pname">YouInstant</div>
 	<div class="search">
-		<input type="text" id="keyword"/>
+		<input type="text" id="keyword" onkeyup="search();"/>
 	</div>
 </div>
 <br />
