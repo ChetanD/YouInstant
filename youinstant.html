@@ -337,16 +337,55 @@
 						
 	
 			             p.innerHTML="";
-						  for(var i=0;i<data.length-2;i++)
+						  for(var i=0;i<data.length-1;i++)
 						  {
 				              p.innerHTML+='<label class="autocomplete" onmouseover="hover(this)">'+data[i]+'</label>';   		  	
 						  }
 						  
-						  document.getElementById("mainvedio").setAttribute("src",data[i]);
-						  var embed='<iframe width="620" height="400"  src="'+data[i]+'" frameborder="0" allowfullscreen></iframe>';
-					  	  document.getElementById("llink").value=data[i];
-					  	  document.getElementById("tembed").value=embed;
-					  	  document.getElementById("vtitle").innerHTML=data[i+1];
+						  data=data.split("&")
+						  var v=document.getElementById("vediolist");
+						   for(var i=0;i<data.length-1;)
+						   {
+						   	 if(i==0)
+						   	 {
+						   	 	document.getElementById("mainvedio").setAttribute("src",data[i]);
+						   	 	var embed='<iframe width="620" height="400"  src="'+data[i]+'" frameborder="0" allowfullscreen></iframe>';
+					  	  		document.getElementById("llink").value=data[i];
+					  	  		document.getElementById("tembed").value=embed;
+						   	 }
+						   	 
+						   	 /*
+						   	  * <div class="vlist">
+			<iframe width="140" height="100" style="float: left" src="http://www.youtube.com/embed/MUYqliUMpnA" frameborder="0" allowfullscreen id="vedio4" class="subvedio"></iframe>
+			<label class="vinfo">Chetan yuvraj dhembre djkfhdjhfd fdhfjd hfjdhfk dfhkdjfh</label>
+	</div>
+	<div class="space"></div>
+						   	  */
+						   	 
+						   	 var dtag=document.createElement("div")
+						   	 dtag.className="vlist";
+						   	 dtag.nodeName=data[i];
+						   	 var imgtag=document.createElement("img");
+						   	 imgtag.setAttribute("width","140");
+						   	 imgtag.setAttribute("height","100");
+						   	 imgtag.style.float="left";
+						   	 imgtag.setAttribute("src",data[i+2]);
+						   	 dtag.appendChild(imgtag);
+						   	 var ltag=document.createElement("label");
+						   	 ltag.className="vinfo";
+						   	 ltag.innerHTML=data[i+1];
+						   	 dtag.appendChild(ltag);
+						   	 var dtag1=document.createElement("div");
+						   	 dtag1.className="space";
+						   	 $(v).prepend(dtag1);
+						   	 $(v).prepend(dtag);
+						   	 i++;
+						   	 
+						   	 
+						   }
+						  
+						  
+	
 				       }
 				 		
 				});
@@ -374,7 +413,7 @@
 	
 </div>
 <div class="mainarea" >
-	<label style="margin-left: 3%;" id="vtitle"></label>
+	
 	<div class="space"></div>
 	<iframe width="620" height="400"  src="http://www.youtube.com/embed/MUYqliUMpnA" frameborder="0" allowfullscreen id="mainvedio" class="subvedio">Chetan</iframe>
 	<br />
@@ -414,34 +453,8 @@
 	</div> 
 </div>
 </div>
-<div class="rightbar">
-	<div class="vlist">
-			<iframe width="140" height="100" style="float: left" src="http://www.youtube.com/embed/MUYqliUMpnA" frameborder="0" allowfullscreen id="vedio4" class="subvedio"></iframe>
-			<label class="vinfo">Chetan yuvraj dhembre djkfhdjhfd fdhfjd hfjdhfk dfhkdjfh</label>
-	</div>
-	<div class="space"></div>
-	<div class="vlist">	
-  			<iframe width="140" height="100" style="float: left" src="http://www.youtube.com/embed/MUYqliUMpnA" frameborder="0" allowfullscreen id="vedio4" class="subvedio"></iframe>
-			<label class="vinfo">Chetan yuvraj dhembre djkfhdjhfd fdhfjd hfjdhfk dfhkdjfh</label>
-	</div>
-	<div class="space"></div>
-	<div class="vlist">
-			<iframe width="140" height="100" style="float: left" src="http://www.youtube.com/embed/MUYqliUMpnA" frameborder="0" allowfullscreen id="vedio4" class="subvedio"></iframe>
-			<label class="vinfo">Chetan yuvraj dhembre djkfhdjhfd fdhfjd hfjdhfk dfhkdjfh</label>
-	</div>
-	<div class="space"></div>
-	<div class="vlist">	
-  			<iframe width="140" height="100" style="float: left" src="http://www.youtube.com/embed/MUYqliUMpnA" frameborder="0" allowfullscreen id="vedio4" class="subvedio"></iframe>
-			<label class="vinfo">Chetan yuvraj dhembre djkfhdjhfd fdhfjd hfjdhfk dfhkdjfh</label>
-	</div>
-	<div class="space"></div>
-	<div class="vlist">	
-		
-  			<iframe width="140" height="100" style="float: left" src="http://www.youtube.com/embed/MUYqliUMpnA" frameborder="0" allowfullscreen id="vedio4" class="subvedio"></iframe>
-  			<label class="vinfo">Chetan yuvraj dhembre djkfhdjhfd fdhfjd hfjdhfk dfhkdjfh</label>
-  		
-	</div>
-	<div class="space"></div>
+<div class="rightbar" id="vediolist">
+	
 	<div class="space"></div>
 	<div class="space"></div>
 	<div class="vlist">	
