@@ -358,16 +358,13 @@
 						  d=d.split('`');
 						  var v=document.getElementById("list");
 						  v.innerHTML="";
+						  document.getElementById("mainvedio").setAttribute("src",d[0]);
+						  var embed='<iframe width="620" height="400"  src="'+d[0]+'" frameborder="0" allowfullscreen></iframe>';
+					  	  document.getElementById("llink").value=data[0];
+					  	  document.getElementById("tembed").value=embed;
 						   for(var i=d.length-2;i>=0;)
 						   {
 						   	
-						   	 if(i-2==0)
-						   	 {
-						   	 	document.getElementById("mainvedio").setAttribute("src",d[i-2]);
-						   	 	var embed='<iframe width="620" height="400"  src="'+d[i-2]+'" frameborder="0" allowfullscreen></iframe>';
-					  	  		document.getElementById("llink").value=data[i-2];
-					  	  		document.getElementById("tembed").value=embed;
-						   	 }
 						   	 
 						   	 /*
 						   	  * <div class="vlist">
