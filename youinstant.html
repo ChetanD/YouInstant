@@ -329,7 +329,8 @@
 					
 					data=data[1].split(',');
 		//			<label class="autocomplete" onmouseover="hover(this)">chetan yuvraj dhemrbe</label>
-		            var p=document.getElementById("resizable"); 
+		            var p=document.getElementById("dolist");
+		            p.innerHTML+='<label class="autocomplete" onmouseover="hover(this)">"'+data.length+'"</label>'; 
 					  for(var i=0;i<data.length;i++)
 					  {
 			              p.innerHTML+='<label class="autocomplete" onmouseover="hover(this)">chetan yuvraj dhembre</label>';   		  	
@@ -353,7 +354,7 @@
 	<div class="doyoumean">
 		<label style="text-align: center;margin-left: 25%" >Do you mean</label>
 	</div>
-	<div>
+	<div id="dolist">
 			<label class="autocomplete" onmouseover="hover(this)">chetan yuvraj dhemrbe</label>
 	</div>	
 		
