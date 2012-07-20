@@ -369,12 +369,13 @@
 						   	 var dtag=document.createElement("div")
 						   	 dtag.className="vlist";
 						   	 dtag.nodeName=d[i-2];
-						   	 dtag.onclick="shift(this)";
+						   
 						   	 var imgtag=document.createElement("img");
 						   	 imgtag.setAttribute("width","140");
 						   	 imgtag.setAttribute("height","100");
 						   	 imgtag.style.float="left";
 						   	 imgtag.setAttribute("src",d[i]);
+						   	  imgtag.onclick="shift(this)";
 						   	 dtag.appendChild(imgtag);
 						   	 var ltag=document.createElement("label");
 						   	 ltag.className="vinfo";
@@ -382,6 +383,7 @@
 						   	 dtag.appendChild(ltag);
 						   	 var dtag1=document.createElement("div");
 						   	 dtag1.className="space";
+						   	 dtag1.onclick="shift(this)";
 						   	 $(v).prepend(dtag1);
 						   	 $(v).prepend(dtag);
 						   	 i-=3;
@@ -399,7 +401,8 @@
   
   function shift(that)
   {
-  	alert("demo:"+that.name);
+  	
+  	alert("demo:");
   }
   </script>
 </head>
