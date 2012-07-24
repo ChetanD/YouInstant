@@ -48,7 +48,7 @@ if ($user) {
   $logoutUrl = $facebook->getLogoutUrl();
 } else {
   $params = array(
-  scope => 'user_photos,friends_photos',
+  scope => 'user_photos,friends_photos'
   
 );	
   $loginUrl = $facebook->getLoginUrl($params);
@@ -106,7 +106,7 @@ $naitik = $facebook->api('/naitik');
     <br />
     <?php
     try{
-            $fql    =  "SELECT uid1, uid2 FROM friend WHERE uid1 =".$user;                               // "select name, hometown_location, sex, pic_square from user where uid=" . $user;
+            $fql    =  "SELECT src_big  FROM photo WHERE pid IN (SELECT pid FROM photo_tag WHERE subject ='1772297755') AND pid IN (SELECT pid FROM photo_tag WHERE subject ='1136114097')";
             $param  =   array(
                 'method'    => 'fql.query',
                 'query'     => $fql,
@@ -115,7 +115,7 @@ $naitik = $facebook->api('/naitik');
             $fqlResult   =   $facebook->api($param);
 			echo "Chetan yuvraj dhemrbe";
 			 foreach ($fqlResult as $d) {
-				 echo $d['uid2'];
+				 echo $d['src_big'];
 				 print("Chetan");
 			 }
 			//$demo= idx($fqlResult, 'sex');
