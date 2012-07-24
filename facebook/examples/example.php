@@ -47,7 +47,11 @@ if ($user) {
 if ($user) {
   $logoutUrl = $facebook->getLogoutUrl();
 } else {
-  $loginUrl = $facebook->getLoginUrl();
+  $params = array(
+  scope => 'user_photos,friends_photos',
+  
+);	
+  $loginUrl = $facebook->getLoginUrl($params);
 }
 
 // This call will always work since we are fetching public data.
