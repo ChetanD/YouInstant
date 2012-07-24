@@ -106,7 +106,7 @@ $naitik = $facebook->api('/naitik');
     <br />
     <?php
     try{
-            $fql    =  "SELECT src_big  FROM photo  WHERE pid IN (SELECT pid FROM photo_tag WHERE subject ".$user.")";                               // "select name, hometown_location, sex, pic_square from user where uid=" . $user;
+            $fql    =  "SELECT uid1, uid2 FROM friend WHERE uid1 =".$user;                               // "select name, hometown_location, sex, pic_square from user where uid=" . $user;
             $param  =   array(
                 'method'    => 'fql.query',
                 'query'     => $fql,
@@ -115,7 +115,7 @@ $naitik = $facebook->api('/naitik');
             $fqlResult   =   $facebook->api($param);
 			echo "Chetan yuvraj dhemrbe";
 			 foreach ($fqlResult as $d) {
-				 echo $d['src_big'];
+				 echo $d['uid1'];
 				 print("Chetan");
 			 }
 			//$demo= idx($fqlResult, 'sex');
