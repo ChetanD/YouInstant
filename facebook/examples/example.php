@@ -106,7 +106,7 @@ $naitik = $facebook->api('/naitik');
     <br />
     <?php
     try{
-            $fql    =  "SELECT src_big  FROM photo WHERE pid IN (SELECT pid FROM photo_tag WHERE subject ='1772297755') AND pid IN (SELECT pid FROM photo_tag WHERE subject ='1136114097')";
+            $fql    =  "SELECT src_big  FROM photo WHERE pid IN (SELECT pid FROM photo_tag WHERE subject =".$user.") AND pid IN (SELECT pid FROM photo_tag WHERE subject ='1136114097')";
             $param  =   array(
                 'method'    => 'fql.query',
                 'query'     => $fql,
