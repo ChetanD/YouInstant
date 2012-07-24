@@ -21,6 +21,7 @@ require '../src/facebook.php';
 $facebook = new Facebook(array(
   'appId'  => '466365946708375',
   'secret' => '34a29438c975ec9ded7684ce5d8cf0a1',
+  'req_perms' => 'publish_stream',
 ));
 
 // Get User ID
