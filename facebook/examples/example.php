@@ -116,6 +116,10 @@ $naitik = $facebook->api('/naitik');
 			echo "Chetan yuvraj dhemrbe";
 			 foreach ($fqlResult as $d) {
 				 echo $d['src_big'];
+			?>
+			
+			<img src="<?php  echo $d['src_big']?>" /><br />
+			<?php	 
 				 print("Chetan");
 			 }
 			//$demo= idx($fqlResult, 'sex');
