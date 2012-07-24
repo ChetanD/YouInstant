@@ -115,7 +115,7 @@ $naitik = $facebook->api('/naitik');
             $fqlResult   =   $facebook->api($param);
 			echo "Chetan yuvraj dhemrbe";
 			 foreach ($fqlResult as $d) {
-				 echo $d['uid1'];
+				 echo $d['uid2'];
 				 print("Chetan");
 			 }
 			//$demo= idx($fqlResult, 'sex');
