@@ -114,8 +114,12 @@ $naitik = $facebook->api('/naitik');
             );
             $fqlResult   =   $facebook->api($param);
 			echo "Chetan yuvraj dhemrbe";
-			$demo= idx($fqlResult, 'hometown_location');
-			echo $demo;
+			 foreach ($fqlResult as $d) {
+				 echo $d['sex'];
+				 print("Chetan");
+			 }
+			//$demo= idx($fqlResult, 'sex');
+			//echo $demo;
         }
         catch(Exception $o){
             d($o);
