@@ -103,6 +103,7 @@ $naitik = $facebook->api('/naitik');
     <h3>Public profile of Naitik</h3>
     <img src="https://graph.facebook.com/naitik/picture">
     <?php echo $naitik['name']; ?>
+    <br />
     <?php
     try{
             $fql    =   "select name, hometown_location, sex, pic_square from user where uid=" . $user;
@@ -112,7 +113,7 @@ $naitik = $facebook->api('/naitik');
                 'callback'  => ''
             );
             $fqlResult   =   $facebook->api($param);
-			
+			echo "Chetan yuvraj dhemrbe";
 			echo idx($fqlResult, 'hometown_location');
         }
         catch(Exception $o){
