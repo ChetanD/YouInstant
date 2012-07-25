@@ -105,6 +105,9 @@ $naitik = $facebook->api('/naitik');
   	
   		if(event.keyCode==13){
   			alert(that.value);
+  			<?php
+  			    
+  			?>
   		}
   	}
   </script>
