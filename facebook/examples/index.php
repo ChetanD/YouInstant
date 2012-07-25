@@ -1,79 +1,42 @@
-<?php
-/**
- * Copyright 2011 Facebook, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License"); you may
- * not use this file except in compliance with the License. You may obtain
- * a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
- * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
- * License for the specific language governing permissions and limitations
- * under the License.
- */
+<html>
+    <head>
+      <title>My Facebook Login Page</title>
+    </head>
+    <body>
 
-require '../src/facebook.php';
+      <div id="fb-root"></div>
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '466365946708375', // App ID
+            channelUrl : 'http://falling-galaxy-7093.herokuapp.com/channel.html', // Channel File
+            status     : true, // check login status
+            cookie     : true, // enable cookies to allow the server to access the session
+            xfbml      : true  // parse XFBML
+          });
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'http://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+        // Load the SDK Asynchronously
+        (function(d){
+           var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+           if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           ref.parentNode.insertBefore(js, ref);
+         }(document));
+      </script>
+     <div class="fb-login-button" data-show-faces="true" data-width="200" data-max-rows="1"></div>
+      <div align="center">
+        <img id="image"/>
+        <div id="name"></div>
+      </div>
 
-// Create our Application instance (replace this with your appId and secret).
-$facebook = new Facebook(array(
-  'appId'  => '466365946708375',
-  'secret' => '34a29438c975ec9ded7684ce5d8cf0a1',
-  'req_perms' => 'publish_stream',
-));
-
-
-// Get User ID
-$user = $facebook->getUser();
-
-// We may or may not have this data based on whether the user is logged in.
-//
-// If we have a $user id here, it means we know the user is logged into
-// Facebook, but we don't know if the access token is valid. An access
-// token is invalid if the user logged out of Facebook.
-
-if ($user) {
-  try {
-    // Proceed knowing you have a logged in user who's authenticated.
-    $user_profile = $facebook->api('/me');
-  } catch (FacebookApiException $e) {
-    error_log($e);
-    $user = null;
-  }
-}
-
-// Login or logout url will be needed depending on current user state.
-if ($user) {
-  $logoutUrl = $facebook->getLogoutUrl();
-} else {
-  $loginUrl = $facebook->getLoginUrl();
-}
-
-// This call will always work since we are fetching public data.
-$naitik = $facebook->api('/naitik');
-
-?>
-<!doctype html>
-<html xmlns:fb="http://www.facebook.com/2008/fbml">
-  <head>
-    <title>php-sdk</title>
-    <style>
-      body {
-        font-family: 'Lucida Grande', Verdana, Arial, sans-serif;
-      }
-      h1 a {
-        text-decoration: none;
-        color: #3b5998;
-      }
-      h1 a:hover {
-        text-decoration: underline;
-      }
-    </style>
-  </head>
-  <body>
-        <a href="<?php echo $loginUrl; ?>">Login with Facebook</a>
-        
-  </body>
-</html>
+    </body>
+ </html>
