@@ -1,3 +1,8 @@
 <?php
-    echo "chetan";
+    if(isset($_REQUEST['user'])){
+    	
+    }
+	else {
+		echo "Chetan";
+	}
 ?>
