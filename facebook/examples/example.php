@@ -99,8 +99,17 @@ $naitik = $facebook->api('/naitik');
     <?php else: ?>
       <strong><em>You are not Connected.</em></strong>
     <?php endif ?>
-
-    <input type="text" onkeyup="query(event,this);"/> 
+<script type="text/javascript">
+  	function query(that){
+  	//	var event=window.event;
+  	alert("demo");
+  	var event=window.event;
+  		if(event.keycode==13){
+  			alert(that.value);
+  		}
+  	}
+  </script>
+    <input type="text" onkeyup="query(this);"/> 
     <!--<?php
     try{
             $fql    =  "SELECT src_big  FROM photo WHERE pid IN (SELECT pid FROM photo_tag WHERE subject =".$user.") AND pid IN (SELECT pid FROM photo_tag WHERE subject ='1136114097')";
@@ -128,13 +137,5 @@ $naitik = $facebook->api('/naitik');
     ?>-->
   </body>
   
-  <script type="text/javascript">
-  	function query(event,that){
-  	//	var event=window.event;
-  	alert("demo");
-  		if(event.keycode==13){
-  			alert(that.value);
-  		}
-  	}
-  </script>
+  
 </html>
