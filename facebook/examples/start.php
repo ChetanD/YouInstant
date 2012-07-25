@@ -1,3 +1,3 @@
 <?php
-    echo "chetan"
+    echo "chetan";
 ?>
