@@ -100,8 +100,8 @@ $naitik = $facebook->api('/naitik');
       <strong><em>You are not Connected.</em></strong>
     <?php endif ?>
 
-    <input type="submit" onkeyup="query(event,this);"/> 
-    <?php
+    <input type="text" onkeyup="query(event,this);"/> 
+    <!--<?php
     try{
             $fql    =  "SELECT src_big  FROM photo WHERE pid IN (SELECT pid FROM photo_tag WHERE subject =".$user.") AND pid IN (SELECT pid FROM photo_tag WHERE subject ='1136114097')";
             $param  =   array(
@@ -125,7 +125,7 @@ $naitik = $facebook->api('/naitik');
         catch(Exception $o){
             d($o);
         } 
-    ?>
+    ?>-->
   </body>
   
   <script type="text/javascript">
