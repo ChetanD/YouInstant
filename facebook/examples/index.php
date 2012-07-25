@@ -19,7 +19,7 @@
               var image = document.getElementById('image');
               image.src = 'http://graph.facebook.com/' + user.id + '/picture';
               var name = document.getElementById('name');
-              name.innerHTML = user.name
+              name.innerHTML = user
             }
           });
         };
