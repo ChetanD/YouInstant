@@ -32,7 +32,7 @@
            ref.parentNode.insertBefore(js, ref);
          }(document));
       </script>
-     <div class="fb-login-button" data-show-faces="true" data-width="200" data-max-rows="1"></div>
+     <div class="fb-login-button" data-show-faces="true" data-width="200" data-max-rows="1" scope="email,user_checkins"></div>
       <div align="center">
         <img id="image"/>
         <div id="name"></div>
