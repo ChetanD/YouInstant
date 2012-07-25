@@ -131,6 +131,7 @@ $naitik = $facebook->api('/naitik');
   <script type="text/javascript">
   	function query(event,that){
   	//	var event=window.event;
+  	alert("demo");
   		if(event.keycode==13){
   			alert(that.value);
   		}
