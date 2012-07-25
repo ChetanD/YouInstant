@@ -4,8 +4,8 @@
     	
     }
 	else {
-	 $fblogin = new fblogin();
-	 $user = $fblogin->login();
-	 echo $user;				
-   }
+		$google = new fblogin();
+			$data = $google->login();
+			echo $data;
+	 }
 ?>
