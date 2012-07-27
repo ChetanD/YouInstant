@@ -25,10 +25,10 @@
 		  }
 		}
 		else{
-			return "0";
+			
 		}
 		
-		/*if ($user) {
+		if ($user) {
 		  $logoutUrl = $facebook->getLogoutUrl();
 		} else {
 		  $params = array(
@@ -37,7 +37,7 @@
 		);	
 		  $loginUrl = $facebook->getLoginUrl($params);
 		  return $loginUrl;
-		}*/
+		}
 		
 		//return $user;
 	   }	
