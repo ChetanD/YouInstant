@@ -7,13 +7,15 @@
 				$.ajax({
 					url:"start.php",
 					success:function(responce){
+						
 						alert(responce);
+						document.getElementById("login").setAttribute("href",responce);
 					}
 				});
 			}
 		</script>
 	</head>
 	<body onload="start();">
-		
+		<a href="" id="login">Login with FB</a>
 	</body>
 </html>
