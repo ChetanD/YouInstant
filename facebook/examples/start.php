@@ -2,7 +2,7 @@
 	require "login.php";
 	session_start();  
 	if(isset($_SESSION['user'])){
-		echo "user is logged in";
+		echo $return12;
 	}
 	else{
 		$login=new fblogin();
