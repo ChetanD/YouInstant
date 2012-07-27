@@ -46,12 +46,14 @@
 ?>
 
 <html>
-	<head>demo</head>
+	<head>
+		<title>demo</title>
+	</head>
 	<body>
 	<?php if(!$user)
 	{
 		?>	
-		<a href="<?php echo $loginURL?>">login</a>
+		<a href="<?php echo $loginURL?>"><?php echo $loginURL ?></a>
 	<?php
 	}
 		else
