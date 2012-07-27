@@ -39,7 +39,7 @@
 		  return $loginUrl;
 		}
 		
-		//return $user;
+		return "demo";
 	   }	
     }
 ?>
