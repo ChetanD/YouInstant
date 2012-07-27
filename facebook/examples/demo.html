@@ -36,9 +36,9 @@
 		        var uid = response.authResponse.userID;
 		    	var accessToken = response.authResponse.accessToken;
 		  } else if (response.status === 'not_authorized') {
-		    // the user is logged in to Facebook,
+		      alert("not authorized");
 		  } else {
-		    // the user isn't logged in to Facebook.
+		    alert("not logged in");
 		  }
 	 });
   };
