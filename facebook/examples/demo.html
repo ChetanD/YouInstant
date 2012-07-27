@@ -13,9 +13,21 @@
 					}
 				});
 			}
+			
+			function getimg(){
+				$.ajax({
+					url:"start.php",
+					success:function(responce){
+						
+						alert(responce);
+					
+					}
+				});
+			}
 		</script>
 	</head>
 	<body onload="start();">
 		<a href="" id="login">Login with FB</a>
+		<input type="ok!!" onclick="getimg();"/>
 	</body>
 </html>
