@@ -50,16 +50,14 @@
 		<title>demo</title>
 	</head>
 	<body>
-	<?php if(!$user)
-	{
-		?>	
-		<a href="<?php echo $loginURL?>"><?php echo $loginURL ?></a>
-	<?php
-	}
-		else
-			{
-				echo "u r logged in";
-			} 
-	?>	
+	    <?php if ($user): ?>
+      <a href="<?php echo $logoutUrl; ?>">ur logged in</a>
+    <?php else: ?>
+      <div>
+        Login using OAuth 2.0 handled by the PHP SDK:
+        <a href="<?php echo $loginUrl; ?>">Login with Facebook</a>
+      </div>
+    <?php endif ?>
+
 	</body>
 </html>
