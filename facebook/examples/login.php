@@ -51,11 +51,11 @@
 	</head>
 	<body>
 	    <?php if ($user): ?>
-      <a href="<?php echo $logoutUrl; ?>">ur logged in</a>
+      <a href="<?php echo $logoutUrl; ?>"><?php echo $logoutUrl; ?></a>
     <?php else: ?>
       <div>
         Login using OAuth 2.0 handled by the PHP SDK:
-        <a href="<?php echo $loginUrl; ?>">Login with Facebook</a>
+        <a href="<?php echo $loginUrl; ?>"><?php echo $loginUrl; ?></a>
       </div>
     <?php endif ?>
 
