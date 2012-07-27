@@ -48,7 +48,7 @@
 <html>
 	<head>demo</head>
 	<body>
-	<?php if($user)
+	<?php if(!$user)
 	{
 		?>	
 		<a href="<?php echo $loginURL?>">login</a>
