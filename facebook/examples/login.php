@@ -55,13 +55,7 @@
            	  <input type="text" name="query"/>
       
            </form>
-       <?php
-	       if ($_POST['query']): 
-	    ?>
-	      <p><?php echo $_POST['query']?></p>
-	    <?php else:?>
-	    	<p><?php echo $_POST['query']?></p>
-	    <?php endif ?>       
+       
     <?php else: ?>
       <div>
         Login using OAuth 2.0 handled by the PHP SDK:
