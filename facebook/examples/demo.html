@@ -30,8 +30,9 @@
       xfbml      : true  // parse XFBML
     });
    
-   alert("demo");
+   
    FB.getLoginStatus(function(response) {
+   	alert("demo");
 		  if (response.status === 'connected') {
 		        var uid = response.authResponse.userID;
 		    	var accessToken = response.authResponse.accessToken;
