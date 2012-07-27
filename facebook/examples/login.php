@@ -53,7 +53,7 @@
 	    <?php if ($user): ?>
            <form method="post" action="">
            	  <input type="text" name="query"/>
-           	  <input type="submit" />
+      
            </form>
     <?php else: ?>
       <div>
