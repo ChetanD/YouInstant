@@ -51,13 +51,23 @@
 	</head>
 	<body>
 	    <?php if ($user): ?>
-      <a href="<?php echo $logoutUrl; ?>"><?php echo $logoutUrl; ?></a>
+           <form method="post" action="">
+           	  <input type="text" name="query"/>
+           	  <input type="submit" />
+           </form>
     <?php else: ?>
       <div>
         Login using OAuth 2.0 handled by the PHP SDK:
         <a href="<?php echo $loginUrl; ?>"><?php echo $loginUrl; ?></a>
       </div>
     <?php endif ?>
-
+    
+    <?php
+       if ($_POST['query']): 
+    ?>
+      <p>yes</p>
+    <?php else:?>
+    	<p>no</p>
+    <?php endif ?>	  
 	</body>
 </html>
