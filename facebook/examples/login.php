@@ -1,9 +1,9 @@
 <?php
     
     require '../src/facebook.php';
-    class fblogin{
     
-	   public function login(){
+    
+	
 	   	
 		 
 	   	$facebook = new Facebook(array(
@@ -17,11 +17,11 @@
 		  try {
 		    // Proceed knowing you have a logged in user who's authenticated.
 		    $user_profile = $facebook->api('/me');
-			echo "1";
+	
 		  } catch (FacebookApiException $e) {
 		    error_log($e);
 		    $user = null;
-			return "-1";
+	
 		  }
 		}
 		else{
@@ -36,10 +36,28 @@
 		  
 		);	
 		  $loginUrl = $facebook->getLoginUrl($params);
-		  return $loginUrl;
+		  
 		}
+	
 		
-		return "demo";
-	   }	
-    }
+	
+		
+    
 ?>
+
+<html>
+	<head>demo</head>
+	<body>
+	<?php if($user)
+	{
+		?>	
+		<a href="<?php echo $loginURL?>">login</a>
+	<?php
+	}
+		else
+			{
+				echo "u r logged in";
+			} 
+	?>	
+	</body>
+</html>
