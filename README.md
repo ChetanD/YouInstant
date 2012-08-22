@@ -1,0 +1,2 @@
+
+This is app is inspired from ytinstant.com developed by standfort student.It is part of project which i created during learning of php. You can get live demo here http://falling-galaxy-7093.herokuapp.com/ do send me feedback and feel free to fork this repository
